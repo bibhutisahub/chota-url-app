@@ -29,5 +29,10 @@ Service: Implements the business logic and handles the access to the EntityObjec
 EntityObjects: Interface for the database. Inserts, updates, deletes and reads objects from the database.
 
 How to start the app
-You should be able to start the example application by executing com.bsahu.chotaurl.ChotaurlAppApplication, which starts a webserver on port 8080 (http://localhost:8017)
+You should be able to start the example application by executing com.bsahu.chotaurl.ChotaurlAppApplication, which starts a webserver on port 8017 (http://localhost:8017)
+
+To generate and run the jar as a standalone application
+mvn clean install -- It will create chotaurl-app-0.0.1-SNAPSHOT.jar inside target folder.
+place the jar in the machine where you want to run
+java -jar chotaurl-app-0.0.1-SNAPSHOT.jar -- It will start the application at http://localhost:8017
 
