@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<p>
+		<!-- Welcome to <span th:text="${appName}"></span> -->
+	</p>
+	<!-- <p><span th:text="${message}"></span></p> -->
+
+	<div class="container">
+		<form name="mform" action="convertUrl" method="post">
+
+			<label for="longUrl">Long URL</label> <input type="text" id="longUrl"
+				name="longUrl" placeholder="Enter the long url">
+			<input type="submit" value="Get short URL">
+
+		</form>
+		<p th:if="${shortUrl != null}">
+			URL : <span th:text="${shortUrl}"></span>
+		</p>
+
+		<form action="getUrlList">
+			<input type="submit" value="List all URL" />
+		</form>
+	</div>
+
+
+</body>
+</html>
